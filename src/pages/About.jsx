@@ -3,13 +3,13 @@ import React from 'react';
 const About = () => {
   return (
     <div className="about-page">
-      {/* Hero Section */}
+      //About
       <section className="about-hero">
         <h1>About <span className="brand-name">Yeppo</span></h1>
         <p className="tagline">Curating Quality for Every Lifestyle</p>
       </section>
 
-      {/* Mission Section */}
+      // Mission
       <section className="about-section mission-section">
         <h2>Our Mission</h2>
         <p>
@@ -20,7 +20,7 @@ const About = () => {
         </p>
       </section>
 
-      {/* Values Section */}
+      // Values
       <section className="about-section values-section">
         <h2>Our Values</h2>
         <div className="values-grid">
@@ -55,7 +55,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story Section */}
+      //Story Section
       <section className="about-section story-section">
         <h2>Our Story</h2>
         <div className="story-content">
@@ -74,7 +74,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      // Commitment
       <section className="about-section commitment-section">
         <h2>Our Commitment to You</h2>
         <div className="commitment-content">

@@ -3,10 +3,15 @@ import { useCart } from '../../context/CartContext';
 import '../../styles/components/ProductCard.css';
 
 const ProductCard = ({ product, showDetails = false }) => {
+  // Access addToCart function from cart context hook
   const { addToCart } = useCart();
+  
+  // Local state to manage details section visibility
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
+  // Returns detailed product information based on category
   const getProductDetails = (category) => {
+    // Switch statement to return category-specific details
     switch (category) {
       case 'beauty':
         return {
@@ -37,20 +42,26 @@ const ProductCard = ({ product, showDetails = false }) => {
     }
   };
 
+  // Get product details based on category
   const details = getProductDetails(product.category);
 
   return (
     <div className="product-card">
+      // Product Image Section
       <div className="product-image">
         <img src={product.image} alt={product.name} />
       </div>
+
+      // Product Information Section
       <div className="product-info">
         <h3 className="product-name">{product.name}</h3>
         <p className="product-price">${product.price.toFixed(2)}</p>
         <span className="product-category">{product.category}</span>
         
+        // Conditional Details Section
         {showDetails && (
           <div className="product-details-section">
+            // Details Toggle Button
             <button 
               className="details-toggle"
               onClick={() => setIsDetailsOpen(!isDetailsOpen)}
@@ -58,6 +69,7 @@ const ProductCard = ({ product, showDetails = false }) => {
               {isDetailsOpen ? 'Hide Details' : 'Show Details'}
             </button>
             
+            // Expanded Details Content
             {isDetailsOpen && (
               <div className="details-content">
                 <p className="description">{details.description}</p>
@@ -69,6 +81,7 @@ const ProductCard = ({ product, showDetails = false }) => {
                     ))}
                   </ul>
                 </div>
+                // Category-Specific Details
                 {details.ingredients && (
                   <p className="ingredients">
                     <strong>Ingredients:</strong> {details.ingredients}
@@ -94,6 +107,7 @@ const ProductCard = ({ product, showDetails = false }) => {
           </div>
         )}
         
+        // Add to Cart Button
         <button 
           className="add-to-cart-btn" 
           onClick={() => addToCart(product)}

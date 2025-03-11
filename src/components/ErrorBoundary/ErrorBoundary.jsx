@@ -4,7 +4,7 @@ import { useRouteError, isRouteErrorResponse, Link } from 'react-router-dom';
 const ErrorBoundary = () => {
   const error = useRouteError();
   
-  // Handle route errors (404, etc)
+  // Handle route errors
   if (isRouteErrorResponse(error)) {
     return (
       <div className="error-container">

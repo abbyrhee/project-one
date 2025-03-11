@@ -11,6 +11,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 
+// Layout 
 const Layout = () => (
   <CartProvider>
     <div className="app">
@@ -23,6 +24,7 @@ const Layout = () => (
   </CartProvider>
 );
 
+// Using hash router for GitHub Pages compatibility
 const router = createHashRouter(
   [
     {

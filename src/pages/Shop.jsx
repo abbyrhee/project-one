@@ -3,6 +3,7 @@ import ProductCard from '../components/Products/ProductCard';
 import '../styles/pages/Shop.css';
 
 const Shop = () => {
+  // State to track currently selected category filter
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const products = [
@@ -146,6 +147,7 @@ const Shop = () => {
     { id: 'decor', name: 'Decor' }
   ];
 
+  // Filter products based on selected category
   const filteredProducts = selectedCategory === 'all'
     ? products
     : products.filter(product => product.category === selectedCategory);
@@ -156,6 +158,7 @@ const Shop = () => {
         <h1 className="products-title">Our Products</h1>
         <div className="category-filters">
           {categories.map(category => (
+            // Category Filter Buttons
             <button
               key={category.id}
               className={`category-button ${selectedCategory === category.id ? 'active' : ''}`}
@@ -167,6 +170,7 @@ const Shop = () => {
         </div>
       </div>
       
+      // Product Grid
       <div className="products-grid">
         {filteredProducts.map(product => (
           <ProductCard key={product.id} product={product} />

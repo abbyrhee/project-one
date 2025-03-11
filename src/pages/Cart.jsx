@@ -7,7 +7,7 @@ const Cart = () => {
   const navigate = useNavigate();
 
   const handleCheckout = () => {
-    // This will trigger the ErrorBoundary component
+    // ErrorBoundary component
     navigate('/checkout-error', { replace: true });
   };
 

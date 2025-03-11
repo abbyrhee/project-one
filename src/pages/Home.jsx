@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* Hero Banner */}
+      /*Banner */
       <section className="hero-banner">
         <div className="hero-content">
           <h1>Welcome to <span className="brand-name">Yeppo</span></h1>
@@ -41,7 +41,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Products */}
+      /* Featured Products */
       <section className="featured-section">
         <h2>Featured Products</h2>
         <div className="featured-products">
@@ -51,7 +51,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Promotions */}
+      /* Promotions */
       <section className="promotions-section">
         <h2>Special Offers</h2>
         <div className="promotions-grid">
