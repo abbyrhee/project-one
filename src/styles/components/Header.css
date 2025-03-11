@@ -1,7 +1,7 @@
 .header {
-  background-color: var(--background-color);
+  background-color: var(--background-color);  /* Add back background color */
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Add back shadow */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -13,6 +13,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;  /* Keep nav container transparent */
+  box-shadow: none;  /* Keep nav container without shadow */
 }
 
 .logo {
@@ -39,7 +41,8 @@
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
-  padding: 0.5rem;
+  /* Remove padding */
+  /* padding: 0.5rem; */
   transition: color 0.3s ease;
   position: relative;
 }
@@ -94,6 +97,8 @@
   .nav-link {
     font-size: 0.9rem;
     white-space: nowrap;
+    /* Remove any padding if present */
+    padding: 0;
   }
 
   .logo h1 {

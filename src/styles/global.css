@@ -1,14 +1,26 @@
 :root {
-  --primary-color: #646cff;
-  --secondary-color: #535bf2;
-  --background-color: #ffffff;
-  --text-color: #213547;
+  /* Base colors */
+  --color-lightest: #eee4e1;  /* Light grayish pink */
+  --color-light: #e7d8c9;     /* Light beige */
+  --color-medium: #e6beae;    /* Soft pink/coral */
+  --color-dark: #b2967d;      /* Warm brown */
+
+  /* Functional color assignments */
+  --primary-color: var(--color-dark);
+  --secondary-color: var(--color-medium);
+  --background-color: var(--color-lightest);
+  --text-color: #4a4a4a;
 }
 
 /* Reset and base styles */
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -16,32 +28,88 @@ body {
   background-color: var(--background-color);
 }
 
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-medium);
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-dark);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: var(--color-medium);
+}
+
+/* Layout */
 #app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text-color);
-  font-family: var(--font-family);
-  margin-bottom: 0.625rem;
-}
-
-/* Layout utilities */
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+/* Cards */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Forms */
+input, textarea {
+  border: 1px solid var(--color-light);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-dark);
+}
+
+/* Navigation */
+nav {
+  padding: 1rem 0;
+  /* Remove the box shadow */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  background-color: transparent;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-light);
+  padding: 2rem 0;
+  margin-top: auto;
 }
   main {
     height: 100%;
@@ -267,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer Styles */
 .footer {
-  background-color: var(--background-color);
+  background-color: var(--color-light);
   padding: 4rem 2rem 1rem;
   margin-top: 4rem;
   border-top: 1px solid #eee;
@@ -436,7 +504,7 @@ address {
 /* Promotions Section */
 .promotions-section {
   padding: 4rem 2rem;
-  background-color: #f8f8f8;
+  background-color: transparent; /* Change from #f8f8f8 to transparent */
 }
 
 .promotions-section h2 {
@@ -453,14 +521,17 @@ address {
 }
 
 .promo-card {
-  background-color: white;
+  /* Remove or change the background-color */
+  background-color: transparent;
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* If you want to keep the shadow, you can, or remove it */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   transition: transform 0.3s ease;
 }
 
+/* Keep the hover effect if you want */
 .promo-card:hover {
   transform: translateY(-5px);
 }
@@ -541,23 +612,19 @@ address {
 
 .category-button {
   padding: 0.75rem 1.5rem;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--color-dark);
   border-radius: 25px;
   background: transparent;
-  color: var(--text-color);
+  color: var(--color-dark);
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.category-button:hover {
-  background-color: var(--primary-color);
-  color: white;
-}
-
+.category-button:hover,
 .category-button.active {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--color-dark);
+  color: var(--color-lightest);
 }
 
 .products-grid {
@@ -613,76 +680,44 @@ address {
   margin-bottom: 3rem;
 }
 
-.products-grid-detailed {
+.products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 3rem;
-}
-
-.product-details {
-  border: 1px solid #eee;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-  background: white;
-}
-
-.product-details:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.product-image img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.product-info-detailed {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
   padding: 2rem;
 }
 
-.product-info-detailed h2 {
-  margin: 0 0 1rem;
-  font-size: 1.5rem;
-}
-
-.product-description {
-  margin: 1.5rem 0;
-}
-
-.product-features {
-  margin: 1.5rem 0;
-}
-
-.product-features ul {
-  list-style: disc;
-  margin-left: 1.5rem;
-}
-
-.product-features li {
-  margin: 0.5rem 0;
-}
-
-.add-to-cart-large {
-  width: 100%;
+/* Category Filters */
+.category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   padding: 1rem;
-  margin-top: 1.5rem;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  margin-bottom: 1rem;
 }
 
-.add-to-cart-large:hover {
-  background-color: var(--secondary-color);
+.category-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-button:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.category-button.active {
+  background: var(--primary-color);
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
-  .products-grid-detailed {
+  .products-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1164,8 +1199,8 @@ address {
 }
 
 .submit-status.success {
-  background-color: #c6f6d5;
-  color: #2f855a;
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .submit-status.error {
@@ -1187,5 +1222,19 @@ address {
   .contact-form-container {
     padding: 1.5rem;
   }
+}
+
+/* Add this to your existing CSS */
+.yeppo-title {
+  color: #e6beae;
+  /* Optional: add more styles */
+  font-weight: bold;
+  /* If you want to use the color variable instead */
+  /* color: var(--color-medium); */
+}
+
+/* If you want to style all instances of the word Yeppo */
+.logo-text {
+  color: #e6beae;
 }
   

@@ -1,16 +1,33 @@
+.home {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
 .hero-banner {
   width: 100%;
   height: 500px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-              url('/images/hero-bg.jpg') center/cover no-repeat;
+  background-image: url('http://localhost:5176/project-one/images/banner.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   margin-bottom: 4rem;
+  border: 2px solid red;
 }
 
+/* Temporarily add this to debug - it will show a red border around the banner */
+.hero-banner {
+  border: 2px solid red;
+}
+
+/* Keep the hero content centered */
 .hero-content {
   max-width: 800px;
   padding: 0 2rem;

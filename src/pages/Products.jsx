@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ProductDetails from '../components/Products/ProductDetails';
+import ProductCard from '../components/Products/ProductCard';
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -8,107 +8,134 @@ const Products = () => {
     // Beauty Products
     {
       id: 1,
-      name: "Natural Face Cream",
+      name: "Radiance-Boosting Face Serum",
       price: 29.99,
-      image: "/images/face-cream.jpg",
-      category: "beauty",
-      description: "A gentle, all-natural face cream that nourishes and hydrates your skin. Made with organic ingredients and suitable for all skin types.",
-      features: [
-        "100% natural ingredients",
-        "Suitable for sensitive skin",
-        "24-hour hydration",
-        "Non-comedogenic",
-        "Paraben-free"
-      ],
-      ingredients: "Aqua, Aloe Vera, Jojoba Oil, Vitamin E, Natural Extracts"
+      image: "/project-one/images/serum.png",
+      category: "beauty"
     },
     {
       id: 2,
-      name: "Organic Lipstick",
+      name: "Hydrating Silk Moisturizer",
       price: 19.99,
-      image: "/images/lipstick.jpg",
-      category: "beauty",
-      description: "Long-lasting, organic lipstick that provides rich color and moisturizing benefits. Made with natural waxes and oils.",
-      features: [
-        "Long-lasting color",
-        "Organic ingredients",
-        "Moisturizing formula",
-        "Available in 12 shades",
-        "Cruelty-free"
-      ],
-      ingredients: "Organic Castor Oil, Beeswax, Natural Pigments, Vitamin E"
+      image: "/project-one/images/moisturizer.png",
+      category: "beauty"
     },
-    // Add more beauty products...
+    {
+      id: 3,
+      name: "Nourishing Lip Balm",
+      price: 34.99,
+      image: "/project-one/images/lipbalm.png",
+      category: "beauty"
+    },
+    {
+      id: 4,
+      name: "Refreshing Facial Mist",
+      price: 45.99,
+      image: "/project-one/images/facemist.png",
+      category: "beauty"
+    },
+    {
+      id: 5,
+      name: "Gentle Exfoliating Cleanser",
+      price: 24.99,
+      image: "/project-one/images/cleanser.png",
+      category: "beauty"
+    },
+    {
+      id: 6,
+      name: "Sheer Natural Blush",
+      price: 39.99,
+      image: "/project-one/images/blush.png",
+      category: "beauty"
+    },
 
     // Clothing Products
     {
       id: 7,
-      name: "Cotton T-Shirt",
+      name: "Classic Cotton T-Shirt",
       price: 24.99,
-      image: "/images/tshirt.jpg",
-      category: "clothing",
-      description: "Premium quality cotton t-shirt with a comfortable fit. Perfect for everyday wear and easy to style.",
-      features: [
-        "100% organic cotton",
-        "Breathable fabric",
-        "Available in multiple colors",
-        "Sizes XS-XXL",
-        "Pre-shrunk material"
-      ],
-      care: "Machine wash cold, Tumble dry low"
+      image: "/project-one/images/tshirt.png",
+      category: "clothing"
     },
     {
       id: 8,
-      name: "Denim Jeans",
+      name: "Relaxed Fit Linen Trousers",
       price: 59.99,
-      image: "/images/jeans.jpg",
-      category: "clothing",
-      description: "Classic fit denim jeans with premium quality construction. Features comfortable stretch and durable design.",
-      features: [
-        "Premium stretch denim",
-        "5-pocket design",
-        "Available in multiple washes",
-        "Sizes 26-38",
-        "Reinforced stitching"
-      ],
-      care: "Machine wash cold, Line dry"
+      image: "/project-one/images/linen.png",
+      category: "clothing"
     },
-    // Add more clothing products...
+    {
+      id: 9,
+      name: "Lightweight Knit Cardigan",
+      price: 49.99,
+      image: "/project-one/images/cardigan.png",
+      category: "clothing"
+    },
+    {
+      id: 10,
+      name: "Flowy Sleeveless Top",
+      price: 79.99,
+      image: "/project-one/images/sleeveless.png",
+      category: "clothing"
+    },
+    {
+      id: 11,
+      name: "High-Waisted Straight Jeans",
+      price: 54.99,
+      image: "/project-one/images/jeans.png",
+      category: "clothing"
+    },
+    {
+      id: 12,
+      name: "Minimalist Midi Dress",
+      price: 129.99,
+      image: "/project-one/images/dress.png",
+      category: "clothing"
+    },
 
     // Decor Products
     {
       id: 13,
-      name: "Ceramic Vase",
+      name: "Hand-Poured Soy Candle",
       price: 39.99,
-      image: "/images/vase.jpg",
-      category: "decor",
-      description: "Handcrafted ceramic vase with a modern design. Perfect for fresh or dried flower arrangements.",
-      features: [
-        "Handmade ceramic",
-        "Modern design",
-        "Waterproof interior",
-        "Multiple size options",
-        "Unique glazing technique"
-      ],
-      dimensions: "H: 12\", W: 6\", D: 6\""
+      image: "/project-one/images/candle.png",
+      category: "decor"
     },
     {
       id: 14,
-      name: "Wall Art Print",
+      name: "Soft Woven Throw Blanket",
       price: 49.99,
-      image: "/images/wall-art.jpg",
-      category: "decor",
-      description: "Contemporary wall art print featuring original artwork. Printed on high-quality paper with archival inks.",
-      features: [
-        "Original artwork",
-        "Archival quality print",
-        "Multiple size options",
-        "Ready to frame",
-        "Certificate of authenticity"
-      ],
-      dimensions: "Available in 12\"x16\", 18\"x24\", 24\"x36\""
+      image: "/project-one/images/throw.png",
+      category: "decor"
+    },
+    {
+      id: 15,
+      name: "Minimalist Ceramic Vase",
+      price: 29.99,
+      image: "/project-one/images/vase.png",
+      category: "decor"
+    },
+    {
+      id: 16,
+      name: "Wooden Picture Frame Set",
+      price: 69.99,
+      image: "/project-one/images/frames.png",
+      category: "decor"
+    },
+    {
+      id: 17,
+      name: "Handcrafted Clay Bowl",
+      price: 89.99,
+      image: "/project-one/images/bowl.png",
+      category: "decor"
+    },
+    {
+      id: 18,
+      name: "Dried Floral Arrangement",
+      price: 44.99,
+      image: "/project-one/images/flower.png",
+      category: "decor"
     }
-    // Add more decor products...
   ];
 
   const categories = [
@@ -139,9 +166,13 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="products-grid-detailed">
+      <div className="products-grid">
         {filteredProducts.map(product => (
-          <ProductDetails key={product.id} product={product} />
+          <ProductCard 
+            key={product.id} 
+            product={product} 
+            showDetails={true} 
+          />
         ))}
       </div>
     </div>

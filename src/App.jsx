@@ -23,42 +23,49 @@ const Layout = () => (
   </CartProvider>
 );
 
-const router = createHashRouter([
+const router = createHashRouter(
+  [
+    {
+      path: '/',
+      element: <Layout />,
+      errorElement: <ErrorBoundary />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: 'shop',
+          element: <Shop />,
+          errorElement: <ErrorBoundary />,
+        },
+        {
+          path: 'products',
+          element: <Products />,
+          errorElement: <ErrorBoundary />,
+        },
+        {
+          path: 'about',
+          element: <About />,
+        },
+        {
+          path: 'contact',
+          element: <Contact />,
+        },
+        {
+          path: 'cart',
+          element: <Cart />,
+          errorElement: <ErrorBoundary />,
+        },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: <Layout />,
-    errorElement: <ErrorBoundary />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: 'shop',
-        element: <Shop />,
-        errorElement: <ErrorBoundary />,
-      },
-      {
-        path: 'products',
-        element: <Products />,
-        errorElement: <ErrorBoundary />,
-      },
-      {
-        path: 'about',
-        element: <About />,
-      },
-      {
-        path: 'contact',
-        element: <Contact />,
-      },
-      {
-        path: 'cart',
-        element: <Cart />,
-        errorElement: <ErrorBoundary />,
-      },
-    ],
-  },
-]);
+    future: {
+      v7_startTransition: true,
+    },
+  }
+);
 
 const App = () => {
   return <RouterProvider router={router} />;

@@ -4,28 +4,29 @@ import ProductCard from '../components/Products/ProductCard';
 import '../styles/pages/Home.css';
 
 const Home = () => {
-  // Sample featured products - replace with your actual data
+  console.log('Home component rendering');
+  
   const featuredProducts = [
     {
       id: 1,
-      name: "Premium Watch",
-      price: 199.99,
-      image: "/images/watch.jpg",
-      discount: 20
+      name: "Radiance-Boosting Face Serum",
+      price: 29.99,
+      image: "/project-one/images/serum.png",
+      category: "beauty"
     },
     {
-      id: 2,
-      name: "Designer Bag",
-      price: 299.99,
-      image: "/images/bag.jpg",
-      discount: 15
+      id: 12,
+      name: "Minimalist Midi Dress",
+      price: 129.99,
+      image: "/project-one/images/dress.png",
+      category: "clothing"
     },
     {
-      id: 3,
-      name: "Wireless Headphones",
-      price: 149.99,
-      image: "/images/headphones.jpg",
-      discount: 25
+      id: 15,
+      name: "Minimalist Ceramic Vase",
+      price: 29.99,
+      image: "/project-one/images/vase.png",
+      category: "decor"
     }
   ];
 
