@@ -1,9 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, getCartTotal, clearCart } = useCart();
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    // This will trigger the ErrorBoundary component
+    navigate('/checkout-error', { replace: true });
+  };
 
   if (cartItems.length === 0) {
     return (
@@ -72,7 +78,7 @@ const Cart = () => {
           <span>Subtotal:</span>
           <span>${getCartTotal().toFixed(2)}</span>
         </div>
-        <button className="checkout-button">
+        <button className="checkout-button" onClick={handleCheckout}>
           Proceed to Checkout
         </button>
       </div>

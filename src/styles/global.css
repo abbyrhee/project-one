@@ -10,27 +10,68 @@
   --secondary-color: var(--color-medium);
   --background-color: var(--color-lightest);
   --text-color: #4a4a4a;
+
+  /* Font family variable */
+  --font-family: "Manrope", sans-serif;
+  --logo-font: "Meddon", cursive;
 }
 
-/* Reset and base styles */
+/* Base font settings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Typography weight variations */
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
 }
 
 body {
-  margin: 0;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
+}
+
+.light-text {
+  font-weight: 300;
+}
+
+.extra-light-text {
+  font-weight: 200;
+}
+
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  line-height: 1.5;
   color: var(--text-color);
   background-color: var(--background-color);
 }
 
-/* Typography */
+/* Update typography */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
   color: var(--text-color);
+}
+
+button {
+  font-family: var(--font-family);
+}
+
+input, textarea {
+  font-family: var(--font-family);
 }
 
 a {
@@ -443,7 +484,7 @@ address {
   width: 100%;
   height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-              url('/images/hero-bg.jpg') center/cover no-repeat;
+              url('/images/banner.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -960,8 +1001,7 @@ address {
 .about-hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('/images/about-hero.jpg') center/cover no-repeat;
+  background: #e6beae;  /* Changed from the gradient */
   color: white;
   border-radius: 12px;
   margin-bottom: 4rem;
@@ -970,11 +1010,13 @@ address {
 .about-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: white;  /* Ensuring text remains white for contrast */
 }
 
 .about-hero .tagline {
   font-size: 1.5rem;
   font-weight: 300;
+  color: white;  /* Ensuring text remains white for contrast */
 }
 
 .about-section {
@@ -1236,5 +1278,54 @@ address {
 /* If you want to style all instances of the word Yeppo */
 .logo-text {
   color: #e6beae;
+}
+
+.brand-name {
+  font-family: var(--logo-font);
+  color: var(--color-medium); /* Using your coral color #e6beae */
+  font-size: 1.8em; /* Adjust size as needed */
+  font-weight: normal; /* Meddon works better without bold */
+  letter-spacing: 0.02em;
+}
+
+/* Special styling for footer brand name */
+.footer .brand-name {
+  color: white;
+}
+
+/* If you need to adjust the size in different contexts */
+.header .brand-name {
+  font-size: 2em;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .brand-name {
+    font-size: 1.5em;
+  }
+  
+  .header .brand-name {
+    font-size: 1.8em;
+  }
+}
+
+/* Add this specific style for the about hero brand name */
+.about-hero .brand-name {
+  color: white;
+}
+  
+/* Add this after your h1 styles */
+.products-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Update the media query for consistency */
+@media screen and (max-width: 768px) {
+  .products-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
 }
   

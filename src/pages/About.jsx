@@ -5,7 +5,7 @@ const About = () => {
     <div className="about-page">
       {/* Hero Section */}
       <section className="about-hero">
-        <h1>About Yeppo</h1>
+        <h1>About <span className="brand-name">Yeppo</span></h1>
         <p className="tagline">Curating Quality for Every Lifestyle</p>
       </section>
 
@@ -61,7 +61,7 @@ const About = () => {
         <div className="story-content">
           <p>
             Founded in 2024, Yeppo began with a simple idea: everyone deserves access 
-            to quality products that bring joy and value to their daily lives. What 
+            to quality products that bring joy and value to their daily lives. Meaning "pretty" in Korean, we aim to make sure you feel pretty regardless of what's going on in your life. What 
             started as a small curated collection has grown into a diverse marketplace 
             offering carefully selected items across beauty, fashion, and home decor.
           </p>

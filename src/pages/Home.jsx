@@ -35,8 +35,8 @@ const Home = () => {
       {/* Hero Banner */}
       <section className="hero-banner">
         <div className="hero-content">
-          <h1>Welcome to Yeppo</h1>
-          <p>Discover our curated collection of premium products</p>
+          <h1>Welcome to <span className="brand-name">Yeppo</span></h1>
+          <p>Embracing the Simple, Celebrating the Little, Finding the Beautiful</p>
           <Link to="/shop" className="cta-button">Shop Now</Link>
         </div>
       </section>
@@ -56,8 +56,8 @@ const Home = () => {
         <h2>Special Offers</h2>
         <div className="promotions-grid">
           <div className="promo-card">
-            <h3>Summer Sale</h3>
-            <p>Up to 50% off on selected items</p>
+            <h3>Spring Refresh</h3>
+            <p>Brighten up your closet with new season styles</p>
             <Link to="/shop" className="promo-link">Shop Sale</Link>
           </div>
           <div className="promo-card">
@@ -67,8 +67,8 @@ const Home = () => {
           </div>
           <div className="promo-card">
             <h3>Free Shipping</h3>
-            <p>On orders over $50</p>
-            <Link to="/shop" className="promo-link">Learn More</Link>
+            <p>On orders over $200</p>
+            <Link to="/shop" className="promo-link">Start Shopping</Link>
           </div>
         </div>
       </section>

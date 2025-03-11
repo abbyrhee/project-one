@@ -3,33 +3,34 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  position: relative;
 }
 
 .hero-banner {
   width: 100%;
   height: 500px;
-  background-image: url('http://localhost:5176/project-one/images/banner.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(to right, var(--color-dark), var(--color-medium));
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   margin-bottom: 4rem;
-  border: 2px solid red;
+  /* Remove the positioning properties that were causing the shift */
+  margin-left: 0;
+  margin-right: 0;
 }
 
-/* Temporarily add this to debug - it will show a red border around the banner */
-.hero-banner {
-  border: 2px solid red;
-}
-
-/* Keep the hero content centered */
 .hero-content {
   max-width: 800px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+/* Add container class for sections that need to be contained */
+.featured-section,
+.promotions-section {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 

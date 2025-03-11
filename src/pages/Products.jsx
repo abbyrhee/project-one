@@ -152,7 +152,7 @@ const Products = () => {
   return (
     <div className="products-page">
       <div className="products-header">
-        <h1>Our Products</h1>
+        <h1 className="products-title">Our Products</h1>
         <div className="category-filters">
           {categories.map(category => (
             <button

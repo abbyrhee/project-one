@@ -12,7 +12,7 @@ const Header = () => {
       <nav className="nav-container">
         <div className="logo">
           <Link to="/">
-            <h1 className="yeppo-title">Yeppo</h1>
+            <h1 className="brand-name">Yeppo</h1>
           </Link>
         </div>
         <div className="nav-links">

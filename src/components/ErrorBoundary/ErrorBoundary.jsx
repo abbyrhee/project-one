@@ -12,7 +12,7 @@ const ErrorBoundary = () => {
           <h1>
             {error.status === 404 ? '404 - Page Not Found' : `${error.status} - ${error.statusText}`}
           </h1>
-          <p>{error.data?.message || "We couldn't find what you were looking for."}</p>
+          <p>{error.data?.message || "Oops! We aren't ready for you to see the awesomeness yet."}</p>
           <div className="error-actions">
             <Link to="/" className="home-button">
               Return to Home

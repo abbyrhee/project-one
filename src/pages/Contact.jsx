@@ -69,15 +69,6 @@ const Contact = () => {
     });
 
     try {
-      // Replace this with your actual API endpoint
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(formData),
-      // });
-
       // Simulating API call with timeout
       await new Promise(resolve => setTimeout(resolve, 1000));
 
@@ -114,7 +105,7 @@ const Contact = () => {
             <div className="contact-item">
               <h3>Address</h3>
               <p>123 Shopping Street</p>
-              <p>Market City, MC 12345</p>
+              <p>Market City, VA 12345</p>
             </div>
             
             <div className="contact-item">

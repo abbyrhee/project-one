@@ -6,8 +6,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>Yeppo</h3>
-          <p>Your one-stop shop for amazing products. Quality meets affordability.</p>
+          <h3 className="brand-name">Yeppo</h3>
+          <p>Because even if life isn't always pretty, at least you'll be.</p>
           <div className="social-links">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
@@ -39,7 +39,7 @@ const Footer = () => {
           <h4>Contact Info</h4>
           <address>
             <p>123 Shopping Street</p>
-            <p>Market City, MC 12345</p>
+            <p>Market City, VA 12345</p>
             <p>Email: info@yeppo.com</p>
             <p>Phone: (555) 123-4567</p>
           </address>
@@ -47,7 +47,7 @@ const Footer = () => {
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Yeppo. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} <span className="brand-name">Yeppo</span>. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -15,7 +15,7 @@ const Layout = () => (
   <CartProvider>
     <div className="app">
       <Header />
-      <main className="container">
+      <main>
         <Outlet />
       </main>
       <Footer />
@@ -56,6 +56,14 @@ const router = createHashRouter(
           path: 'cart',
           element: <Cart />,
           errorElement: <ErrorBoundary />,
+        },
+        {
+          path: 'checkout-error',
+          element: null,
+          errorElement: <ErrorBoundary />,
+          loader: () => {
+            throw new Error("Checkout functionality is not implemented yet");
+          },
         },
       ],
     },
